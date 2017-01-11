@@ -1,0 +1,36 @@
+//
+//  bigbusiness-PrefixHeader.pch
+//  bigbusiness
+//
+//  Created by zzy on 11/12/15.
+//  Copyright © 2015 zzy. All rights reserved.
+//
+
+#ifndef bigbusiness_PrefixHeader_pch
+#define bigbusiness_PrefixHeader_pch
+
+#import "ViewControllerBase.h"
+#import <Masonry/Masonry.h>
+#import "UIAdapter.h"
+#import <MJRefresh/MJRefresh.h>
+#import "MBProgressHUD.h"
+#import <BmobSDK/Bmob.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "FMDB.h"
+#import "DataBaseOperation.h"
+#import "bigbusiness-swift.h"
+#import "AFNetworking.h"
+#import "SVProgressHUD.h"
+
+#define CustomColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha: 1.0]
+//数据库路径
+#define dbPath [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]stringByAppendingPathComponent:@"bigbusiness.sqlite"]
+
+
+//简单的以AlertView显示提示信息
+#define alertView(title, msg) \
+UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil \
+cancelButtonTitle:@"确定" \
+otherButtonTitles:nil]; \
+[alert show];
+#endif /* bigbusiness_PrefixHeader_pch */
